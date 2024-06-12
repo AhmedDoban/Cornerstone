@@ -25,6 +25,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 .container {
   padding-left: 25px;
@@ -122,7 +123,7 @@ User Contact General info
   margin: 0;
   color: #fff;
   font-family: "Euclid Circular B";
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.2px;
@@ -196,6 +197,7 @@ User Contact General Information
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #000;
 }
 .User_Contact .User-Information .container .box p {
   color: #000;

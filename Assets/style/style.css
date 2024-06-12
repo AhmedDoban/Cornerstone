@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "Euclid Circular B"; 
+  src: url("../../webfonts/Euclid\ Circular\ B\ Regular.ttf"); 
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-transition: all 0.3s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*Mobile Screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*Tab Screen*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*PC Screen*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+User Contact
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.User_Contact {
+  position: relative;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+User Contact General info
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.User_Contact .General-info {
+  position: relative;
+  display: flex;
+  background-color: #007279;
+}
+
+.User_Contact .General-info::before {
+  position: absolute;
+  content: "";
+  width: 240px;
+  height: 300px;
+  right: 0;
+  top: 0;
+  background-image: url("../image/Logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.User_Contact .General-info .container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 50px;
+}
+
+.User_Contact .container img {
+  position: relative;
+  width: 35px;
+}
+.User_Contact .container .avatar {
+  position: relative;
+  width: 175px;
+  height: 270px;
+}
+.User_Contact .container .avatar img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.User_Contact .container .info {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.User_Contact .container .info img {
+  position: relative;
+  width: 150px;
+  max-width: 100%;
+}
+.User_Contact .container .info .user-name {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.User_Contact .container .info .user-name h1 {
+  position: relative;
+  margin: 0;
+  color: #fff;
+  font-family: "Euclid Circular B";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.User_Contact .container .info .user-name p {
+  position: relative;
+  color: #fff;
+  font-family: "Euclid Circular B";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+User Contact General Actions
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.User_Contact .General-Actions {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px #cacaca;
+}
+.User_Contact .General-Actions .container {
+  position: relative;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.User_Contact .General-Actions .container .action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.User_Contact .General-Actions .container .action i {
+  position: relative;
+  font-size: 20px;
+  color: #007279;
+}
+.User_Contact .General-Actions .container .action span {
+  position: relative;
+  color: #000;
+  font-family: "Euclid Circular B";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+User Contact General Information
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.User_Contact .User-Information {
+  position: relative;
+  width: 100%;
+  padding: 36px 0;
+  background-color: #e2dfd6;
+  min-height: calc(100vh - 408.5px);
+}
+.User_Contact .User-Information .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.User_Contact .User-Information .container .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.User_Contact .User-Information .container .box p {
+  color: #000;
+  font-family: "Euclid Circular B";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.User_Contact .User-Information .container .box span {
+  color: #000;
+  font-family: "Euclid Circular B";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+.User_Contact .User-Information .container .Social {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.User_Contact .User-Information .container .Social i {
+  font-size: 22px;
+  color: #007279;
+}
+
+.User_Contact .User-Information .container .action-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.User_Contact .User-Information .container .action-buttons button {
+  display: flex;
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: #f9ad3b;
+  border: 0;
+  cursor: pointer;
+}

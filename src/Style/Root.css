@@ -1,0 +1,9 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Root
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+:root {
+  --main-transition: all 0.5s ease-in-out;
+  --main-border-radius: 0.5rem;
+  --main-padding-top: 50px;
+  --main-padding-bottom: 50px;
+}

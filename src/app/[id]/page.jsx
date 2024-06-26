@@ -143,8 +143,8 @@ function Home() {
 
           <ul className="Social">
             {User?.links.map((link, index) => (
-              <li>
-                <a href={link} key={index}>
+              <li key={index}>
+                <a href={link}>
                   <i className={switchIcon(link)}></i>
                 </a>
               </li>

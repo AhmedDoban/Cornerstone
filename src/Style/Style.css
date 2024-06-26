@@ -233,23 +233,3 @@ User Contact General Information
   font-size: 22px;
   color: #007279;
 }
-
-.User_Contact .User-Information .container .action-buttons {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.User_Contact .User-Information .container .action-buttons button {
-  display: flex;
-  padding: 10px 40px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border-radius: 50px;
-  color: #ffffff;
-  background-color: #f9ad3b;
-  border: 0;
-  cursor: pointer;
-  text-transform: uppercase;
-}

@@ -34,6 +34,24 @@ function Home() {
     GetUserData();
   }, [Parmas.id]);
 
+  const switchIcon = (icon) => {
+    const IncludesIcon = (TestIcon) => {
+      return icon.toLowerCase().includes(TestIcon);
+    };
+    const Test = IncludesIcon("facebook")
+      ? "fa-brands fa-facebook"
+      : IncludesIcon("whatsapp")
+      ? "fa-brands fa-whatsapp"
+      : IncludesIcon("linked")
+      ? "fa-brands fa-linkedin-in"
+      : IncludesIcon("instagram")
+      ? "fa-brands fa-instagram"
+      : IncludesIcon("youtube")
+      ? "fa-brands fa-youtube"
+      : "fa-solid fa-link";
+    return Test;
+  };
+
   return IsLoading ? (
     <Loading />
   ) : error ? (
@@ -68,11 +86,12 @@ function Home() {
       {/* <!--General-Actions--> */}
       <div className="General-Actions">
         <div className="container">
-          <a className="action">
-            <i className="fa-solid fa-message"></i>
-            <span>Message</span>
-          </a>
-
+          {User?.mobiles && (
+            <a className="action" href={`sms:${User?.mobiles[1]}`}>
+              <i className="fa-solid fa-message"></i>
+              <span>Message</span>
+            </a>
+          )}
           {User?.mobiles && (
             <a className="action" href={`tel:${User?.mobiles[1]}`}>
               <i className="fa-solid fa-phone"></i>
@@ -118,40 +137,19 @@ function Home() {
           {User?.organization_url && (
             <div className="box">
               <p>Website :</p>
-              <span>https://cornerstonedv.com/</span>
+              <span>{User?.organization_url}</span>
             </div>
           )}
 
           <ul className="Social">
-            <li>
-              <a href="">
-                <i className="fa-brands fa-whatsapp"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i className="fa-brands fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i className="fa-brands fa-youtube"></i>
-              </a>
-            </li>
+            {User?.links.map((link, index) => (
+              <li>
+                <a href={link} key={index}>
+                  <i className={switchIcon(link)}></i>
+                </a>
+              </li>
+            ))}
           </ul>
-          <div className="action-buttons">
-            <button>Create new contact</button>
-          </div>
         </div>
       </div>
     </div>
